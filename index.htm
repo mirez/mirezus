@@ -89,7 +89,7 @@ function transition() {
   d3.selectAll("path")
     .data( ( 
     layers1 =   stack(d3.transpose( d3.range(n).map( ()=> {  return bumps(100,100) })))  , 
-    layers0 =  stack(d3.transpose( d3.range(n).map( ()=> { if(n==6){ return bumps(100,100).map((e)=> { return e * 1.618 }) }else   return bumps(100,100); }))) 
+    layers0 =  stack(d3.transpose( d3.range(n).map( ()=> { if(n==6){ return bumps(100,100).map((e)=> { return e * 3.618 }) }else   { return bumps(100,100); } }))) 
     )) 
 
     .transition()
@@ -140,9 +140,7 @@ seqs = j;
 console.log("about to log");
 console.log(seqs[0].slice(0,m));
 var s1 = bumps(100,100);
-var s2 = bumps(100,100);
-
-seqs = d3.range(11).map(()=>{ return  bumps(100,100) });
+var s2 = bumps(100,100); 
 
 
 let color = d3.scaleOrdinal().range(colorArr);
