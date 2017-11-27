@@ -1,2 +1,4 @@
-# mirezus
-Simple home site
+# mirez.us
+Simple home site source code
+
+

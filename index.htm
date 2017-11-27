@@ -47,7 +47,7 @@ a.centered:hover {
 </head>
 <body>
 <svg id="stage" width="3840" height="2160" ></svg>
-<h1 class="centered"><a href="https://linkedin.com/in/link2alramirez">mirez.us</a></h1>  
+<h1 class="centered" id="headr"><a href="https://linkedin.com/in/link2alramirez">mirez.us</a></h1>  
  
 <script src="https://d3js.org/d3.v4.min.js"></script>
 <script>
@@ -125,6 +125,9 @@ var h = window.innerHeight;
 
 document.getElementById('stage').setAttribute("height",  h);
 document.getElementById('stage').setAttribute("width",  w);
+
+document.getElementById('headr').style.fontSize = (( h * 0.618) + "px" );
+
 let xx = colorArr[ Math.round( Math.random() * 10) % 11 ];
 console.log(xx);
 document.body.style.backgroundColor = xx;
